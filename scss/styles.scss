@@ -1,0 +1,110 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3% 8%;
+    background-color: #fefefe;
+    align-items: center;
+    #links-header{
+        text-align: center;
+        align-content: center;
+        a{
+            padding: 4px 8px;
+            text-decoration: none;
+            color: #1f1f1f;
+            &:hover{
+                border-bottom: 2px solid #565656;
+                transition: ease-in-out;
+                color: #565656;
+            }
+            &:active{
+                border-bottom: 1px solid #565656;
+                transition: linear;
+            }
+        }
+    }
+
+
+}
+
+main{
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    section.project-hero{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        min-height: 80vh;
+        padding: 90px 10% 90px 10%;
+        /* min-height: calc(100vh - 110px); */
+        /* no puedo hacer que aplique bien el space between */
+        article{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            div{
+                h1{
+                    width: min-content;
+                }
+            }
+            div.infos-container{
+                padding: 16px 12px;
+                div.info{
+                    padding-bottom: 24px;
+                }
+            }
+            
+        }
+        figure {
+            position: absolute;
+            height: auto;
+            width: 70%;
+            z-index: -1;
+            top: 2;
+            left: 0;
+            bottom: 1;
+            right: 0;
+            margin: auto;
+            img {
+                width: auto; /* Asegura que la imagen no se desborde del contenedor */
+                height: auto; /* Mantiene la proporción de la imagen */
+                border-radius: 4px;
+            }
+            
+        }
+    }
+    
+   
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 8%;
+    background-color: #fefefe;
+    margin-top: auto;
+    section{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        div{
+            display: flex;
+            gap: 24px;
+        }
+    }
+    nav{
+        a{
+            padding: 4px 8px;
+            text-decoration: none;
+            color: #1f1f1f;
+        }
+    }
+}

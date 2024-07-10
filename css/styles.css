@@ -1,638 +1,103 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: 0px;
-}
-
-
-
-html{
-    height: 100%;
-    width: 100%;
-}
-
-body{
-    background-color: #fefefe;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: "Open Sans", sans-serif;}
-
-/* --------HEADER----------------------------------------------------------------------------------------------------------------------------------------- */
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    padding: 3% 8%;
-    background-color: #fefefe;
-    align-items: center;
-}
-
-
-#links-header{
-    text-align: center;
-    align-content: center;
-}
-
-#links-header a{
-    padding: 4px 8px;
-    text-decoration: none;
-    color: #1f1f1f;
-}
-
-#links-header a:hover{
-    border-bottom: 1px solid #1f1f1f;
-    transition: linear;
-}
-
-#links-header a:active{
-    border-bottom: 1px solid #1f1f1f;
-    transition: linear;
-}
-
-@media (max-width: 480px){
-    header{
-        align-items: center;
-        flex-direction: column;
-    }
-
-    header section{
-        margin-top: 12px;
-        align-content: center;
-    }
-
-}
-
-
-
-
-/* --------HOME-MAIN----------------------------------------------------------------------------------------------------------------------------------------- */
-
-main{
-    align-items: center;
-    position: relative;
-    justify-content: center;
-}
-
-main section.project-hero{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    min-height: 80vh;
-    padding: 90px 10% 90px 10%;
-    /* min-height: calc(100vh - 110px); */
-    /* no puedo hacer que aplique bien el space between */
-}
-
-main section article{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    
-}
-
-main section article div h1{
-    width: min-content;
-}
-
-main section figure {
-    position: absolute;
-    height: auto;
-    width: 70%;
-    z-index: -1;
-    top: 2;
-    left: 0;
-    bottom: 1;
-    right: 0;
-    margin: auto;
-    
-}
-
-
-main section figure img {
-    width: auto; /* Asegura que la imagen no se desborde del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 4px;
-}
-
-
-div.infos-container{
-    padding: 16px 12px;
-}
-
-div.infos-container div.info{
-    padding-bottom: 24px;
-}
-
-
-
-/* MEDIA QUERIES */
-
-/* banner principal */
-@media (max-width: 480px){
-
-    main{
-        min-height: auto;
-    }
-
-    main section.project-hero{
-
-        min-height: 100%;
-        padding: 90px 20px;
-        
-
-    }
-
-    main section figure img{
-        /* height: calc(100vh - 360px); */
-        height: 80%;
-        width: 80%;
-    }
-
-    main section article div h1.display-112{
-        font-size: 4rem;
-    }
-
-
-}
-
-@media (min-width: 480px) and (max-width:638px){
-        main section figure{
-            width: 100%;
-
-        }
-
-        main section figure img{
-            width: 100%;
-        }
-
-        main section article div h1.display-112{
-            font-size: 6rem;
-        }
-}
-
-
-/* ---SECCION ABOUT ----------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* seccion principal */
-main section.section-main-banner-1{ 
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 112px 10%;
-    align-items: flex-end;
-    gap: 155px;
-}
-main section.section-main-banner-1 div{
-    width: 70%;
-}
-
-main section.section-main-banner-1 div.infos-container{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-
-main section.section-main-banner-1 div.infos-container div.info{
-    width: 100%;
-}
-
-main section.section-main-banner-1 div.infos-container img{
-    width: 104px;
-    height: 104px;
-    border-radius: 4px;
-    padding-bottom: 24px;
-}
-
-/* seccion de informacion de mi about */
-section.three-columns-content{
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 80px 10%;
-}
-
-section article.about-me{
-    width: 33.3333%;
-}
-
-section article.about-me h2{
-    padding-bottom: 12px;
-}
-
-section article.about-me p{
-    padding-bottom: 12px;
-}
-
-section article.about-me button{
-    padding: 6px 8px;
-    margin-top: 32px;
-    color: #1f1f1f;
-    background-color: #fefefe;
-    border: 0px 0px 1px 0px solid #1f1f1f;
-    cursor: pointer;
-}
-
-section article.about-me button:hover{
-    border: 3px solid #1f1f1f;
-}
-
-section.three-columns-content figure{
-    position: relative;
-    justify-content: flex-start;
-    width: 33.3333%;
-    height: 600px;
-    margin: 0px 48px 0px 48px;
-}
-
-main section figure img{
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-
-article.about-capabilities{
-    width: 33.3333%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-
-
-ul.capabilities-list{
-    padding-top: 12px;
-}
-
-ul.capabilities-list li{
-    list-style: none;
-    font-size: 14px;
-    line-height: 140%;
-    color: #1f1f1f;
-    font-style: normal;
-    padding: 2px 0px 2px 0px;
-}
-
-
-
-
-
-/* MEDIA QUERIES DE ABOUT */
-
-/* main banner */
-@media (max-width: 638px){
-
-    main section.section-main-banner-1{
-        flex-wrap: wrap;
-        padding: 112px 20px;
-        gap: 48px;
-    }
-    main section.section-main-banner-1 div{
-        width: 100%;
-    }
-
-    main section.section-main-banner-1 div h2{
-        font-size: 48px;
-    }
-
+@charset "UTF-8";
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 3% 8%;
+  background-color: #fefefe;
+  align-items: center;
+}
+header #links-header {
+  text-align: center;
+  align-content: center;
+}
+header #links-header a {
+  padding: 4px 8px;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+header #links-header a:hover {
+  border-bottom: 2px solid #565656;
+  transition: ease-in-out;
+  color: #565656;
+}
+header #links-header a:active {
+  border-bottom: 1px solid #565656;
+  transition: linear;
+}
+
+main {
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+main section.project-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  min-height: 80vh;
+  padding: 90px 10% 90px 10%;
+  /* min-height: calc(100vh - 110px); */
+  /* no puedo hacer que aplique bien el space between */
+}
+main section.project-hero article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+main section.project-hero article div h1 {
+  width: min-content;
+}
+main section.project-hero article div.infos-container {
+  padding: 16px 12px;
+}
+main section.project-hero article div.infos-container div.info {
+  padding-bottom: 24px;
+}
+main section.project-hero figure {
+  position: absolute;
+  height: auto;
+  width: 70%;
+  z-index: -1;
+  top: 2;
+  left: 0;
+  bottom: 1;
+  right: 0;
+  margin: auto;
+}
+main section.project-hero figure img {
+  width: auto; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 4px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 8%;
+  background-color: #fefefe;
+  margin-top: auto;
+}
+footer section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer section div {
+  display: flex;
+  gap: 24px;
+}
+footer nav a {
+  padding: 4px 8px;
+  text-decoration: none;
+  color: #1f1f1f;
+}
 
-    main section.section-main-banner-1 div.infos-container{
-        width: 100%;
-        padding: 0px;
-    }
-
-}
-
-
-@media (min-width: 639px) and (max-width:939px){
-    main section.section-main-banner-1{
-        gap: 80px;
-    }
-
-    main section.section-main-banner-1 div h2{
-        font-size: 56px;
-    }
-}
-
-@media (min-width: 940px) and (max-width:1140px){
-    main section.section-main-banner-1 div h2{
-        font-size: 72px;
-    }
-}
-
-/* about me */
-@media (max-width: 638px){
-    section.three-columns-content{
-        flex-direction: column;
-        align-items:center ;
-        gap: 32px;
-        padding: 0px 40px 72px;
-    }
-
-    section.three-columns-content figure{
-        margin: 0%;
-        height: auto;
-    }
-
-    section article.about-me{
-        width: 80%;
-    }
-
-    section.three-columns-content figure{
-        width: 80%;
-    }
-
-    article.about-capabilities{
-        width: 80%;
-    }
-
-    section article.about-me button{
-        width: 100%;
-    }
-}
-
-
-/* ---SECCION CONTACT ----------------------------------------------------------------------------------------------------------------------------------------------- */
-main figure.circle-image{
-    width: auto;
-    position: relative;
-}
-
-main figure.circle-image img{
-    width: auto;
-}
-
-
-
-main section.two-columns-content{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 80px 155px 168px 155px;
-}
-
-main section form.contact-form{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 70%;
-    padding: 0px 48px 0px 48px;
-}
-
-main section form.contact-form label{
-    font-weight:600 ;
-}
-
-
-main section form.contact-form input{
-    padding: 32px 20px;
-    border: none;
-    border-bottom: 1px solid #1f1f1f;
-    border-top: 1px solid #1f1f1f;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    color: #b4b4b4;
-}
-
-main section form.contact-form legend{
-    font-weight:600 ;
-}
-
-main section form.contact-form textarea{
-    padding: 32px 20px;
-    border: none;
-    border-bottom: 1px solid #1f1f1f;
-    border-top: 1px solid #1f1f1f;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    color: #b4b4b4;
-}
-
-main section.two-columns-content article.contact-details{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-end;
-}
-
-main section.two-columns-content article.contact-details p{
-    font-weight: 700;
-}
-
-ul.socials-list{
-    padding-top: 16px;
-}
-
-ul.socials-list li{
-    list-style: none;
-    font-size: 14px;
-    line-height: 140%;
-    color: #1f1f1f;
-    font-style: normal;
-    padding: 2px 0px 2px 0px;
-}
-
-ul.socials-list li a{
-    font-size: 14px;
-    line-height: 140%;
-    color: #1f1f1f;
-    font-style: normal;
-    padding: 2px 0px 2px 0px;
-    text-decoration: none;
-}
-
-
-/* MEDIA QUERIES */
-
-/* form */
-@media (max-width: 1024px){
-    main section.two-columns-content{
-        flex-wrap: wrap;
-        padding: 0px 20px 80px 20px;
-        justify-content: center;
-        gap: 48px;
-    }
-
-    main section.two-columns-content article.contact-details{
-        width: 100%;
-        align-content: flex-start;
-        padding: 0px 48px;
-    }
-
-    main section form.contact-form{
-        width: 100%;
-    }
-}
-
-
-/* --------PROYECTS PAGE CON BOOTSTRAP----------------------------------------------------------------------------------------------------------------------------------------- */
-
-.h1, h1{
-    font-family: font-family: "Roboto", sans-serif !important;
-    font-size: 5.5rem;
-    font-weight: 800;
-    
-}
-
-.mb-4{
-    margin-bottom: 0px !important;
-}
-
-.mt-5{
-    margin-top: 112PX !important;
-}
-
-.row{
-    padding: 80px 0px 80px 0px;
-}
-
-.btn-primary{
-    font-family: "Roboto", sans-serif;
-    background-color: #1f1f1f;
-    color: #fefefe;
-    font-size: 18px;
-    padding: 20px 24px;
-    transition-duration: 0.4s;
-}
-
-.btn-primary:hover{
-    background-color: #fefefe;
-    border: 2px solid #1f1f1f;
-    color: #1f1f1f;
-    cursor: pointer;
-}
-
-
-/* ------------FOOTER----------------------------------------------------------------------------------------------------------------------------------------- */
-
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3% 8%;
-    background-color: #fefefe;
-    margin-top: auto;
-}
-
-footer section{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-footer section div{
-    display: flex;
-    gap: 24px;
-}
-
-
-
-footer nav a{
-    padding: 4px 8px;
-    text-decoration: none;
-    color: #1f1f1f;
-}
-
-footer nav a:hover{
-    cursor: pointer;
-    
-}
-
-@media (max-width: 480px){
-    footer{
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    footer section{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    footer nav a{
-        padding-left: 0px;
-    }
-
-
-    
-
-}
-
-
-/* F---TEXT STYLES----------------------------------------------------------------------------------------------------------------------------------------- */
-
-.general-link{
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-}
-
-.general-img{
-    min-height: 40px;
-}
-
-.display-112{
-    font-family: "Open Sans", sans-serif;
-    font-size: 7rem;
-    line-height: 100%;
-    color: #1f1f1f;
-    font-weight: 900;
-}
-
-.display-88{
-    font-family: "Open Sans", sans-serif;
-    font-size: 5.5rem;
-    line-height: 100%;
-    color: #1f1f1f;
-    font-weight: 900;
-}
-
-.subtitle-18{
-    font-family: "Open Sans", sans-serif;
-    color: #1f1f1f;
-    font-size: 1.2rem;
-    padding-bottom: 2px;
-
-}
-
-.label-14{
-    font-family: "Open Sans", sans-serif;
-    color: #1f1f1f;
-    font-size: .9rem;
-    letter-spacing: .03cm;
-}
-
-.p-14{
-    font-size: .9rem;
-    color: #1f1f1f;
-    line-height: 180%;
-}
-
-.primary-button{
-    font-family: "Roboto", sans-serif;
-    background-color: #1f1f1f;
-    color: #fefefe;
-    font-size: 18px;
-    padding: 20px 24px;
-    transition-duration: 0.4s;
-}
-
-.primary-button:hover{
-    background-color: #fefefe;
-    border: 2px solid #1f1f1f;
-    color: #1f1f1f;
-    cursor: pointer;
-}
+/*# sourceMappingURL=styles.css.map */
