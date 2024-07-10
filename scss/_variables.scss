@@ -1,0 +1,103 @@
+// COLORS
+
+$n10: #fefefe;
+$n50: #ebebeb;
+$n75: #ababab;
+$n100: #898989;
+$n200: #565656;
+$n300: #333333;
+$n400: #242424;
+$n500: #1f1f1f;
+
+
+// TEXTS
+.display-112{
+    font-family: "Open Sans", sans-serif;
+    font-size: 7rem;
+    line-height: 100%;
+    color: $n500;
+    font-weight: 900;
+}
+
+.display-88{
+    font-family: "Open Sans", sans-serif;
+    font-size: 5.5rem;
+    line-height: 100%;
+    color: $n500;
+    font-weight: 900;
+}
+
+.subtitle-18{
+    font-family: "Open Sans", sans-serif;
+    color: $n500;
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+
+}
+
+.label-14{
+    font-family: "Open Sans", sans-serif;
+    color: $n500;
+    font-size: .9rem;
+    letter-spacing: .03cm;
+}
+
+.label-14-light{
+    font-family: "Open Sans", sans-serif;
+    color: $n200;
+    font-size: .9rem;
+    letter-spacing: .03cm;
+}
+
+.label-bold{
+    font-family: "Open Sans", sans-serif;
+    color: $n500;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .03cm;
+}
+
+.p-14{
+    font-size: .9rem;
+    color: $n500;
+    line-height: 180%;
+}
+
+.general-link{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+
+
+// BUTTONS
+.primary-button{
+    font-family: "Roboto", sans-serif;
+    background-color: $n500;
+    color: $n10;
+    font-size: 18px;
+    padding: 20px 24px;
+    transition-duration: 0.4s;
+    &:hover{
+        background-color: $n10;
+        border: 2px solid $n500;
+        color: $n500;
+        cursor: pointer;
+    }
+    &:active{
+        background-color: $n50;
+    }
+    &:disabled{
+        background-color: $n100;
+        color: $n300;
+    }
+}
+
+
+
+
+// IMAGES
+.general-img{
+    min-height: 40px;
+}
+

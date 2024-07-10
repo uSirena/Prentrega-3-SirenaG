@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: $n10;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+
+  
+}
+
+main{
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+@media (max-width: 480px){
+
+    main{
+        min-height: auto;
+    }
+}

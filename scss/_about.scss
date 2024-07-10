@@ -1,0 +1,87 @@
+main{ 
+
+    section.section-main-banner-1{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 112px 10%;
+        align-items: flex-end;
+        gap: 155px;
+        div{
+            width: 70%;
+            // AQUI VA UN H2 CON SUS ESTILOS
+        }
+        div.infos-container{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            div.info{
+                width: 100%;
+            }
+            img{
+                width: 104px;
+                height: 104px;
+                border-radius: 4px;
+                padding-bottom: 24px;
+            }
+        }
+    }
+    section.three-columns-content{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 80px 10%;
+        article.about-me{
+            width: 33.3333%;
+            h2{
+                padding-bottom: 12px;
+            }
+            p{
+                padding-bottom: 12px;
+            }
+            button{
+                padding: 6px 8px;
+                margin-top: 32px;
+                color: $n500;
+                background-color: $n10;
+                border: 0px 0px 1px 0px solid $n500;
+                // cursor: pointer; PONER DESPUES ESTILOS CON BARIABLE
+                &:hover{
+                    border: 3px solid #1f1f1f;
+                }
+            }
+        }
+        figure{
+            position: relative;
+            justify-content: flex-start;
+            width: 33.3333%;
+            height: 600px;
+            margin: 0px 48px 0px 48px;
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+        }
+        article.about-capabilities{
+            width: 33.3333%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            ul.capabilities-list{
+                padding-top: 12px;
+                li{
+                    list-style: none;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #1f1f1f;
+                    font-style: normal;
+                    padding: 2px 0px 2px 0px;
+                }
+            }
+        }
+    }
+}

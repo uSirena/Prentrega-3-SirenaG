@@ -1,0 +1,75 @@
+main{
+    section.section-main-banner-1{
+        figure.circle-image{
+            width: auto;
+            position: relative;
+            img{
+                width: auto;
+            }
+        }
+    }
+    section.two-columns-content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 80px 155px 168px 155px;
+        form.contact-form{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            width: 70%;
+            padding: 0px 48px 0px 48px;
+            label{
+                font-weight:600 ;
+            }
+            input{
+                padding: 32px 20px;
+                border: none;
+                border-bottom: 1px solid #1f1f1f;
+                border-top: 1px solid #1f1f1f;
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                color: #b4b4b4;
+            }
+            legend{
+                font-weight:600 ;
+            }
+            textarea{
+                padding: 32px 20px;
+                border: none;
+                border-bottom: 1px solid #1f1f1f;
+                border-top: 1px solid #1f1f1f;
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                color: #b4b4b4;
+            }
+        }
+        article.contact-details{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: flex-end;
+            ul.socials-list{
+                padding-top: 16px;
+                li{
+                    list-style: none;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #1f1f1f;
+                    font-style: normal;
+                    padding: 2px 0px 2px 0px;
+                    a{
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #1f1f1f;
+                        font-style: normal;
+                        padding: 2px 0px 2px 0px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

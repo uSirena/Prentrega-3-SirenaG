@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3% 8%;
+    background-color: $n10;
+    align-items: center;
+    #links-header{
+        text-align: center;
+        align-content: center;
+        a{
+            padding: 4px 8px;
+            text-decoration: none;
+            color: $n500;
+            &:hover{
+                border-bottom: 2px solid $n200;
+                transition: ease-in-out;
+                color: $n200;
+            }
+            &:active{
+                border-bottom: 1px solid $n200;
+                transition: linear;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 480px){
+    header{
+        align-items: center;
+        flex-direction: column;
+        section{
+            margin-top: 12px;
+            align-content: center;
+        }
+    }
+}
