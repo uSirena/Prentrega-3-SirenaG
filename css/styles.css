@@ -290,6 +290,58 @@ main section.three-columns-content article.about-capabilities ul.capabilities-li
   padding: 2px 0px 2px 0px;
 }
 
+/* MEDIA QUERIES */
+/* about */
+@media (max-width: 638px) {
+  main section.section-main-banner-1 {
+    flex-wrap: wrap;
+    padding: 112px 20px;
+    gap: 48px;
+  }
+  main section.section-main-banner-1 div {
+    width: 100%;
+  }
+  main section.section-main-banner-1 div h2.display-88 {
+    font-size: 48px;
+  }
+  main section.section-main-banner-1 div.infos-container {
+    width: 100%;
+    padding: 0px;
+  }
+  main section.three-columns-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 40px 72px;
+  }
+  main section.three-columns-content article.about-me {
+    width: 80%;
+  }
+  main section.three-columns-content article.about-me button {
+    width: 100%;
+  }
+  main section.three-columns-content figure {
+    margin: 0%;
+    height: auto;
+    width: 80%;
+  }
+  main section.three-columns-content article.about-capabilities {
+    width: 80%;
+  }
+}
+@media (min-width: 639px) and (max-width: 939px) {
+  main section.section-main-banner-1 {
+    gap: 80px;
+  }
+  main section.section-main-banner-1 div h2.display-88 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 940px) and (max-width: 1140px) {
+  main section.section-main-banner-1 div h2.display-88 {
+    font-size: 72px;
+  }
+}
 main section.section-main-banner-1 figure.circle-image {
   width: auto;
   position: relative;
@@ -362,6 +414,32 @@ main section.two-columns-content article.contact-details ul.socials-list li a {
   text-decoration: none;
 }
 
+/* MEDIA QUERIES */
+/* form */
+@media (max-width: 1024px) {
+  main section.two-columns-content {
+    flex-wrap: wrap;
+    padding: 0px 20px 80px 20px;
+    justify-content: center;
+    gap: 48px;
+  }
+  main section.two-columns-content form.contact-form {
+    width: 100%;
+  }
+  main section.two-columns-content article.contact-details {
+    width: 100%;
+    align-content: flex-start;
+    padding: 0px 48px;
+  }
+  main section.two-columns-content article.contact-details {
+    width: 100%;
+    align-content: flex-start;
+    padding: 0px 48px;
+  }
+  main section form.contact-form {
+    width: 100%;
+  }
+}
 footer {
   display: flex;
   justify-content: space-between;
@@ -398,11 +476,21 @@ footer nav a:active {
   footer {
     align-items: flex-start;
     flex-direction: column;
+    padding: 8%;
+    border-top: 1px solid #ebebeb;
   }
   footer section {
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 16px;
+  }
+  footer section div {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ababab;
+  }
+  footer nav {
+    padding-top: 16px;
   }
   footer nav a {
     padding-left: 0px;

@@ -48,7 +48,7 @@ main{
                 border: 0px 0px 1px 0px solid $n500;
                 // cursor: pointer; PONER DESPUES ESTILOS CON BARIABLE
                 &:hover{
-                    border: 3px solid #1f1f1f;
+                    border: 3px solid $n500;
                 }
             }
         }
@@ -77,10 +77,80 @@ main{
                     list-style: none;
                     font-size: 14px;
                     line-height: 140%;
-                    color: #1f1f1f;
+                    color: $n500;
                     font-style: normal;
                     padding: 2px 0px 2px 0px;
                 }
+            }
+        }
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* about */
+
+
+@media (max-width: 638px){
+    main{
+        section.section-main-banner-1{
+            flex-wrap: wrap;
+            padding: 112px 20px;
+            gap: 48px;
+            div{
+                width: 100%;
+                h2.display-88{
+                    font-size: 48px;
+                }
+            }
+            div.infos-container{
+                width: 100%;
+                padding: 0px;
+            }
+        }
+        section.three-columns-content{
+            flex-direction: column;
+            align-items:center ;
+            gap: 32px;
+            padding: 0px 40px 72px;
+            article.about-me{
+                width: 80%;
+                button{
+                    width: 100%;
+                }
+            }
+            figure{
+                margin: 0%;
+                height: auto;
+                width: 80%;
+            }
+            article.about-capabilities{
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 639px) and (max-width:939px){
+    main section.section-main-banner-1{
+        gap: 80px;
+        div{
+            h2.display-88{
+                font-size: 56px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 940px) and (max-width:1140px){
+    main section.section-main-banner-1{
+        div{
+            h2.display-88{
+                font-size: 72px;
             }
         }
     }

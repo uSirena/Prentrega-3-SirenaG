@@ -73,3 +73,36 @@ main{
         }
     }
 }
+
+/* MEDIA QUERIES */
+
+/* form */
+
+@media (max-width: 1024px){
+    main{
+        section.two-columns-content{
+            flex-wrap: wrap;
+            padding: 0px 20px 80px 20px;
+            justify-content: center;
+            gap: 48px;
+            form.contact-form{
+                width: 100%;
+            }
+            article.contact-details{
+                width: 100%;
+                align-content: flex-start;
+                padding: 0px 48px;
+            }
+        }
+    }
+
+    main section.two-columns-content article.contact-details{
+        width: 100%;
+        align-content: flex-start;
+        padding: 0px 48px;
+    }
+
+    main section form.contact-form{
+        width: 100%;
+    }
+}
