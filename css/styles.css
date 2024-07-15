@@ -77,6 +77,28 @@
   color: #333333;
 }
 
+.secondary-button {
+  font-family: "Roboto", sans-serif;
+  background-color: #fefefe;
+  color: #1f1f1f;
+  border: 2px solid #333333;
+  font-size: 18px;
+  padding: 12px 16px;
+  transition-duration: 0.4s;
+}
+.secondary-button:hover {
+  background-color: #1f1f1f;
+  color: #ebebeb;
+  cursor: pointer;
+}
+.secondary-button:active {
+  background-color: #1f1f1f;
+}
+.secondary-button:disabled {
+  border: 2px solid #565656;
+  color: #565656;
+}
+
 .general-img {
   min-height: 40px;
 }
@@ -242,7 +264,6 @@ main section.section-main-banner-1 {
   flex-direction: row;
   padding: 112px 10%;
   align-items: flex-end;
-  gap: 155px;
 }
 main section.section-main-banner-1 div {
   width: 70%;
@@ -276,16 +297,6 @@ main section.three-columns-content article.about-me h2 {
 }
 main section.three-columns-content article.about-me p {
   padding-bottom: 12px;
-}
-main section.three-columns-content article.about-me button {
-  padding: 6px 8px;
-  margin-top: 32px;
-  color: #1f1f1f;
-  background-color: #fefefe;
-  border: 0px 0px 1px 0px solid #1f1f1f;
-}
-main section.three-columns-content article.about-me button:hover {
-  border: 3px solid #1f1f1f;
 }
 main section.three-columns-content figure {
   position: relative;
@@ -369,6 +380,14 @@ main section.three-columns-content article.about-capabilities ul.capabilities-li
 @media (min-width: 940px) and (max-width: 1140px) {
   main section.section-main-banner-1 div h2.display-88 {
     font-size: 72px;
+  }
+}
+@media (min-width: 1440px) {
+  main section.section-main-banner-1 {
+    justify-content: space-between;
+  }
+  main section.section-main-banner-1 div {
+    width: 50%;
   }
 }
 main section.section-main-banner-1 figure.circle-image {
@@ -460,13 +479,10 @@ main section.two-columns-content article.contact-details ul.socials-list li a {
     align-content: flex-start;
     padding: 0px 48px;
   }
-  main section.two-columns-content article.contact-details {
-    width: 100%;
-    align-content: flex-start;
-    padding: 0px 48px;
-  }
-  main section form.contact-form {
-    width: 100%;
+}
+@media (min-width: 1440px) {
+  main section.two-columns-content {
+    margin: 10%;
   }
 }
 footer {

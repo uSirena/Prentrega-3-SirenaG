@@ -6,7 +6,6 @@ main{
         flex-direction: row;
         padding: 112px 10%;
         align-items: flex-end;
-        gap: 155px;
         div{
             width: 70%;
             // AQUI VA UN H2 CON SUS ESTILOS
@@ -40,17 +39,7 @@ main{
             p{
                 padding-bottom: 12px;
             }
-            button{
-                padding: 6px 8px;
-                margin-top: 32px;
-                color: $n500;
-                background-color: $n10;
-                border: 0px 0px 1px 0px solid $n500;
-                // cursor: pointer; PONER DESPUES ESTILOS CON BARIABLE
-                &:hover{
-                    border: 3px solid $n500;
-                }
-            }
+
         }
         figure{
             position: relative;
@@ -152,6 +141,15 @@ main{
             h2.display-88{
                 font-size: 72px;
             }
+        }
+    }
+}
+
+@media (min-width: 1440px){
+    main section.section-main-banner-1{
+        justify-content: space-between;
+        div{
+            width: 50%;
         }
     }
 }
