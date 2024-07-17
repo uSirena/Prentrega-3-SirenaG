@@ -1,78 +1,204 @@
-main{
-    section.project-hero{
+main.slider {
+    height: calc(100vh - 160px);
+    section.project-hero {
+        padding: 0px;
+    }
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 90px 10%;
+    box-sizing: border-box;
+
+    article {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: relative;
-        min-height: 80vh;
-        padding: 90px 10% 90px 10%;
-        /* min-height: calc(100vh - 110px); */
-        /* no puedo hacer que aplique bien el space between */
-        article{
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-end;
+        gap: 20px;
+
+        div {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-end;
-            width: 100%;
-            div{
-                h1{
-                    width: min-content;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+
+            h1 {
+                font-size: 112px;
+                margin: 0;
+                width: 100%;
+            }
+
+            &.infos-container {
+                display: flex;
+                justify-content: space-between;
+                width: 20%;
+                padding: 20px 20px;
+                background-color: #fefefe;
+                opacity: 0.9;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                gap: 24px;
+
+                .info {
+                    position: sticky;
+                    width: 100%;
+                    align-items: start;
+                }
+            }
+        }
+    }
+
+    figure {
+        position: absolute;
+        height: 668px;
+        width: 668px;
+        z-index: -1;
+        margin: auto;
+
+        img {
+            position: relative;
+            width: 668px;
+            height: 668px;
+            border-radius: 4px;
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .slide {
+        padding: 90px 20px;
+        
+        article {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80vw;
+            div {
+                width: 100%;
+                h1 {
+                    font-size: 48px;
                 }
             }
             div.infos-container{
-                padding: 16px 12px;
-                div.info{
-                    padding-bottom: 24px;
-                }
+                width: auto;
             }
-            
         }
+
         figure {
-            position: absolute;
-            height: auto;
-            width: 70%;
-            z-index: -1;
-            top: 2;
-            left: 0;
-            bottom: 1;
-            right: 0;
-            margin: auto;
+            width: 60vw;
+            height: 60vh;
             img {
-                width: auto; /* Asegura que la imagen no se desborde del contenedor */
-                height: auto; /* Mantiene la proporción de la imagen */
-                border-radius: 4px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
-            
         }
     }
+}
+
+@media (min-width: 1440px) {
+    .slider {
+        align-items: center;
+    }
+
+    .slide {
+        padding: 90px 20px;
+        width: 1440px;
+    }
+}
+
+.slide:not(:first-child) {
+    display: none;
+}
+
+
+
+// main{
+//     section.project-hero{
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         position: relative;
+//         min-height: 80vh;
+//         padding: 90px 10% 90px 10%;
+//         /* min-height: calc(100vh - 110px); */
+//         /* no puedo hacer que aplique bien el space between */
+//         article{
+//             display: flex;
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//             justify-content: space-between;
+//             align-items: flex-end;
+//             width: 100%;
+//             div{
+//                 h1{
+//                     width: min-content;
+//                 }
+//             }
+//             div.infos-container{
+//                 padding: 16px 12px;
+//                 div.info{
+//                     padding-bottom: 24px;
+//                 }
+//             }
+            
+//         }
+//         figure {
+//             position: absolute;
+//             height: auto;
+//             width: 70%;
+//             z-index: -1;
+//             top: 2;
+//             left: 0;
+//             bottom: 1;
+//             right: 0;
+//             margin: auto;
+//             img {
+//                 width: auto; /* Asegura que la imagen no se desborde del contenedor */
+//                 height: auto; /* Mantiene la proporción de la imagen */
+//                 border-radius: 4px;
+//             }
+            
+//         }
+//     }
     
    
-}
+// }
 
-@media (max-width: 480px){
-    main{
-        section.project-hero{
-            min-height: 100%;
-            padding: 90px 20px;
-            article{
-                div{
-                    h1.display-112{
-                        font-size: 4rem;
-                    }
-                }
-            }
-            figure{
-                img{
-                    height: 80%;
-                    width: 80%;
-                }
-            }
+// @media (max-width: 480px){
+//     main{
+//         section.project-hero{
+//             min-height: 100%;
+//             padding: 90px 20px;
+//             article{
+//                 div{
+//                     h1.display-112{
+//                         font-size: 4rem;
+//                     }
+//                 }
+//             }
+//             figure{
+//                 img{
+//                     height: 80%;
+//                     width: 80%;
+//                 }
+//             }
         
-        }
-    }
+//         }
+//     }
 
 
-}
+// }

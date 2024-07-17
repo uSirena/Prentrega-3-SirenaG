@@ -29,7 +29,114 @@
 
     </header>
 
-    <main>
+
+    <main class="slider">
+        <section class="project-hero slide">
+            <article>
+                <div>
+                    <label class="label-16">/1</label>
+                    <h1 class="display-112">CCD Design</h1>
+                    <h1 class="display-112">System</h1>
+                </div>
+                <div class="infos-container">
+                    <div class="info">
+                        <p class="subtitle-18">Design System</p>
+                        <p class="label-14">LEAD UI DESIGNER</p>
+                    </div>
+                    <div class="info">
+                        <p class="label-14">2021</p>
+                    </div>
+                    <a href="./pages/projects/ccd-design-system.html">
+                        <button class="primary-button">View project</button>
+                      </a>
+                      
+                    </a>
+                    
+                </div>
+            </article>
+            <figure class="img-slider">
+                <img src="./assets/images/ccd-slide.jpg" alt="Project Image">
+            </figure>
+        </section>
+    
+        <section class="project-hero slide">
+            <article>
+                <div>
+                    <label class="label-16">/2</label>
+                    <h1 class="display-112">Samson</h1><h1 class="display-112">Pickleball</h1>
+                </div>
+                <div class="infos-container">
+                    <div class="info">
+                        <p class="subtitle-18">Web Development</p>
+                        <p class="label-14">FRONTEND DEVELOPER</p>
+                    </div>
+                    <div class="info">
+                        <p class="label-14">2022</p>
+                    </div>
+                    <a href="./pages/projects/samson.html">
+                        <button class="primary-button">View project</button>
+                      </a>
+                </div>
+            </article>
+            <figure class="img-slider">
+                <img src="./assets/images/samson-slide.jpg" alt="Another Project Image">
+            </figure>
+        </section>
+    
+        <section class="project-hero slide">
+            <article>
+                <div>
+                    <label class="label-16">/3</label>
+                    <h1 class="display-112">Prokennex</h1>
+                    <h1 class="display-112">Pickleball</h1>
+                </div>
+                <div class="infos-container">
+                    <div class="info">
+                        <p class="subtitle-18">UI/UX Design</p>
+                        <p class="label-14">DESIGN LEAD</p>
+                    </div>
+                    <div class="info">
+                        <p class="label-14">2023</p>
+                    </div>
+                    <a href="./pages/projects/prokennex.html">
+                        <button class="primary-button">View project</button>
+                      </a>
+                </div>
+            </article>
+            <figure class="img-slider">
+                <img src="./assets/images/proke-slide.jpg" alt="Final Project Image">
+            </figure>
+        </section>
+    </main>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'flex' : 'none';
+            });
+        }
+    
+        document.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                currentIndex = (currentIndex + 1) % slides.length;
+            } else {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            }
+            showSlide(currentIndex);
+        });
+    
+        showSlide(currentIndex);
+    </script>
+
+
+    <!-- <main>
+
         <section class="project-hero">
 
             <article>
@@ -57,9 +164,9 @@
             </figure>
             
         </section>
-    </main>
+    </main> -->
 
-    <footer>
+    <!-- <footer>
             
         <section>
 
@@ -87,7 +194,7 @@
             <a class="general-link" href="./pages/contact.html">Contact</a>
         </nav>
 
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -121,3 +121,20 @@ $n500: #1f1f1f;
     min-height: 40px;
 }
 
+
+// SLIDER
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.slide {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    // padding: 90px 10%;
+    box-sizing: border-box;
+}
