@@ -1,8 +1,12 @@
 @import "variables";
-@import "generales";
-@import "header";
+@import "./layout/_generales";
+@import "./components/_header";
 @import "home";
-@import "proyects";
-@import "about";
-@import "contact";
-@import "footer";
+@import "./pages/_proyects";
+@import "./pages/_about";
+@import "./pages/_contact";
+@import "./components/_buttons";
+@import "./components/_footer";
+@import "./styles/_colors";
+@import "./styles/_text";
+

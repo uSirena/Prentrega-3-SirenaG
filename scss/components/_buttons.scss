@@ -1,0 +1,45 @@
+
+// BUTTONS
+.primary-button{
+    font-family: "Roboto", sans-serif;
+    background-color: $n500;
+    color: $n10;
+    font-size: 18px;
+    padding: 12px 16px;
+    transition-duration: 0.4s;
+    &:hover{
+        background-color: $n10;
+        border: 2px solid $n500;
+        color: $n500;
+        cursor: pointer;
+    }
+    &:active{
+        background-color: $n50;
+    }
+    &:disabled{
+        background-color: $n100;
+        color: $n300;
+    }
+}
+
+.secondary-button{
+    font-family: "Roboto", sans-serif;
+    background-color: $n10;
+    color: $n500;
+    border: 2px solid $n300;
+    font-size: 18px;
+    padding: 12px 16px;
+    transition-duration: 0.4s;
+    &:hover{
+        background-color: $n500;
+        color: $n50;
+        cursor: pointer;
+    }
+    &:active{
+        background-color: $n500;
+    }
+    &:disabled{
+        border: 2px solid $n200;
+        color: $n200;
+    }
+}
