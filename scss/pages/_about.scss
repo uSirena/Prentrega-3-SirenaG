@@ -1,3 +1,4 @@
+
 main{ 
 
     section.section-main-banner-1{
@@ -22,6 +23,9 @@ main{
                 height: 104px;
                 border-radius: 4px;
                 padding-bottom: 24px;
+                animation-name: example;
+                animation-duration: 4s;
+                animation: bounce 2s infinite;
             }
         }
     }
@@ -49,7 +53,8 @@ main{
             margin: 0px 48px 0px 48px;
             img{
                 width: 100%;
-                height: auto;
+                height: 100%;
+                object-fit: cover;
                 border-radius: 1000px;
             }
         }
