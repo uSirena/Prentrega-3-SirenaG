@@ -173,6 +173,13 @@ main.slider section.project-hero {
   opacity: 0.9;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   gap: 24px;
+  background-color: #ebebeb;
+}
+.slide article div.infos-container .primary-button {
+  background-color: #ebebeb;
+  color: #ababab;
+  border: 1px solid #ababab;
+  cursor: not-allowed;
 }
 .slide article div.infos-container .info {
   position: sticky;
@@ -605,7 +612,7 @@ footer nav a:active {
   }
   footer section div {
     padding-bottom: 16px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ababab;
   }
   footer nav {
     padding-top: 16px;

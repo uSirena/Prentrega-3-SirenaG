@@ -1,3 +1,6 @@
+$project-status: process; // Cambia este valor a 'process' o 'complete'
+
+
 main.slider {
     height: calc(100vh - 160px);
     section.project-hero {
@@ -53,6 +56,22 @@ main.slider {
                 opacity: 0.9;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 gap: 24px;
+                @if $project-status == 'process' {
+                    background-color: $n50;
+                    .primary-button{
+                        background-color: $n50;
+                        color: $n75;
+                        border: 1px solid $n75;
+                        cursor: not-allowed;
+                    }               
+                     // Cambia el cursor cuando el botón está deshabilitado
+                    
+                } @else if $project-status == 'complete' {
+                    background-color: $n10;
+                } @else {
+                    background-color: $n100; // Valor por defecto si el estado no es ni 'process' ni 'complete'
+                }
+
 
                 .info {
                     position: sticky;
