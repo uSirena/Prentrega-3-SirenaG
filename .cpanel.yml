@@ -1,0 +1,18 @@
+---
+deployment:
+  tasks:
+    # NOTA: public_html no debe renombrarse ni borrarse.
+    - export DEPLOYPATH=/home/uSirena/public_html
+    - export REPOPATH=/home/uSirena/repositories/Prentrega-3-SirenaG
+    # Para futuros Deploys
+    # Remover archivos previos, si los hay.
+    - /bin/rm -Rf ${DEPLOYPATH}_old
+    # Copiar archivos viejos a otro directorio.
+    - /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
+    # Sincronizar archivos, excluyendo .git
+    # --delete-after remueve archivos borrados después de la sincronización.
+    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
+    # Setear permisos.
+    - /bin/chmod 755 ${DEPLOYPATH}
+    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
+    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
