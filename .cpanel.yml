@@ -2,8 +2,9 @@
 deployment:
   tasks:
     # NOTA: public_html no debe renombrarse ni borrarse.
-    - export DEPLOYPATH=/home/uSirena/public_html
-    - export REPOPATH=/home/uSirena/repositories/Prentrega-3-SirenaG
+    # USERNAME de cPanel
+    - export DEPLOYPATH=/home/g0rbozvqt2kv/public_html
+    - export REPOPATH=/home/g0rbozvqt2kv/repositories/Prentrega-3-SirenaG
     # Para futuros Deploys
     # Remover archivos previos, si los hay.
     - /bin/rm -Rf ${DEPLOYPATH}_old
