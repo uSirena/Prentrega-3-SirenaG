@@ -1,0 +1,43 @@
+$transition-duration: 0.5s;
+$transition-timing: ease;
+$slide-width-mobile: 100%; // Ajusta el ancho de la diapositiva en móviles si es necesario
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-timing,
+              transform $transition-duration $transition-timing;
+  transform: translateX(100%);
+
+  &.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.previous {
+    transform: translateX(-100%);
+  }
+
+  &.next {
+    transform: translateX(100%);
+  }
+
+  // Estilos específicos para dispositivos móviles
+  @media (max-width: 768px) {
+    width: $slide-width-mobile; // Ajusta el ancho de la diapositiva para móviles
+
+    &.active,
+    &.previous,
+    &.next {
+      // Puedes ajustar las transiciones específicas para móviles aquí si es necesario
+      transition: opacity $transition-duration $transition-timing,
+                  transform $transition-duration $transition-timing;
+    }
+  }
+}

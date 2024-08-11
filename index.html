@@ -111,14 +111,21 @@
     
     
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         let currentIndex = 0;
         const slides = document.querySelectorAll('.slide');
     
-        function showSlide(index) {
+        function showSlide(index, direction) {
             slides.forEach((slide, i) => {
-                slide.style.display = (i === index) ? 'flex' : 'none';
+                slide.classList.remove('active', 'previous', 'next');
+    
+                if (i === index) {
+                    slide.classList.add('active');
+                } else if (i === (index - 1 + slides.length) % slides.length) {
+                    slide.classList.add('previous');
+                } else if (i === (index + 1) % slides.length) {
+                    slide.classList.add('next');
+                }
             });
         }
     
@@ -158,6 +165,7 @@
     
         showSlide(currentIndex);
     </script>
+    
 
 
     <!-- <main>
