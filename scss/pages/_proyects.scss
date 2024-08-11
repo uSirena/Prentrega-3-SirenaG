@@ -1,5 +1,8 @@
 // transform: translate(-0%, 90%);
 
+div.row{
+    padding-top: 80px;
+}
 
 div.card{
     height: 100%;
@@ -37,7 +40,10 @@ div.card{
 // MEDIA QUERIES
 
 @media (max-width: 638px){
-    h1{
+    h1.display-88{
         font-size: 48px;
+    }
+    div.row{
+        padding-top: 40px;
     }
 }

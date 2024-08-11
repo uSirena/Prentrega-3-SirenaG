@@ -241,6 +241,10 @@ main.slider section.project-hero {
   display: none;
 }
 
+div.row {
+  padding-top: 80px;
+}
+
 div.card {
   height: 100%;
 }
@@ -270,6 +274,14 @@ div.card div.card-body a.btn:disabled {
   color: #333333;
 }
 
+@media (max-width: 638px) {
+  h1.display-88 {
+    font-size: 48px;
+  }
+  div.row {
+    padding-top: 40px;
+  }
+}
 main section.section-main-banner-1 {
   height: 100%;
   display: flex;
